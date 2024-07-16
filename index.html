@@ -1,59 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;800&display=swap">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Example</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="hold-transition login-page" id="frmLogin">
-        <div class="login-box">
-            <div class="login-logo">
-                <div style="margin: 0;font-weight: 800;color: #202020;font-family: 'Kanit', sans-serif; text-align: center;">
-                    <span style="color: #7130e9; margin: 0 10px;"><i class="fa-solid fa-earth-americas"></i></span>SupraSOFT <span style="color: #7130e9;">Admin</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body login-card-body">
-                    <p class="login-box-msg">Iniciar Sesión</p>
-                    <form class="needs-validation" novalidate>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Email" name="loginEmail" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" name="loginPassword" required>
-                        </div>
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="icheck-primary">
-                                    <input type="checkbox" id="remember" onchange="rememberMe(event)">
-                                    <label for="remember">Remember Me</label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" id="iniciar-sesion" class="btn btn-block">Ingresar</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="login-footer">
-                        <a href="#">Olvide contraseña</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <button type="submit">Login</button>
+        </form>
     </div>
+    
+    <div id="main-content" class="hidden">
+        <h1>Welcome to the main content!</h1>
+        <p>This content is only visible after logging in.</p>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
